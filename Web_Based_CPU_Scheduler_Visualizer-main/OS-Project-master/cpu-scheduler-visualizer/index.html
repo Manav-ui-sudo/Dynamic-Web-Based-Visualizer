@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CPU Scheduler Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CPU Scheduling Visualizer</h1>
+
+  <form id="input-form">
+    <label>Algorithm:
+      <select id="algorithm">
+        <option value="FCFS">FCFS</option>
+        <option value="SRTF">SRTF</option>
+        <option value="RR">Round Robin</option>
+      </select>
+    </label>
+    <label>Time Quantum:
+      <input type="number" id="quantum" value="4" min="1">
+    </label>
+    <button type="button" onclick="addProcess()">Add Process</button>
+    <button type="submit">Run</button>
+  </form>
+
+  <table id="process-table">
+    <tr><th>ID</th><th>Arrival</th><th>Burst</th></tr>
+  </table>
+
+  <div id="gantt"></div>
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
